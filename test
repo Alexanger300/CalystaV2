@@ -1,0 +1,91 @@
+/* Group 1000006021 */
+
+position: absolute;
+width: 187px;
+height: 46.67px;
+left: calc(50% - 187px/2 + 0.5px);
+top: 4009px;
+
+
+
+/* Rectangle 5 */
+
+position: absolute;
+width: 187px;
+height: 46.67px;
+left: 627px;
+top: 4009px;
+
+background: #E3CB93;
+border-radius: 30px;
+
+
+/* En savoir plus */
+
+position: absolute;
+width: 126px;
+height: 17.25px;
+left: calc(50% - 126px/2 + 1px);
+top: 4021.18px;
+
+font-family: 'Helvetica LT Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+/* or 133% */
+
+color: #1B1464;
+
+
+
+/* Rectangle 24 */
+
+position: absolute;
+width: 696px;
+height: 363px;
+left: calc(50% - 696px/2);
+top: 3561px;
+
+background: rgba(86, 77, 176, 0.5);
+border-radius: 50px;
+
+
+/* Pack de Base */
+
+position: absolute;
+width: 362px;
+height: 72px;
+left: calc(50% - 362px/2 - 2px);
+top: 3625px;
+
+font-family: 'National Park';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 64px;
+/* or 178% */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Une salle pour se ressourcer, de manière individuelle. */
+
+position: absolute;
+width: 362px;
+height: 36px;
+left: calc(50% - 362px/2 - 2px);
+top: 3820px;
+
+font-family: 'National Park';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 16px;
+/* or 100% */
+text-align: center;
+
+color: #FFFFFF;
+
