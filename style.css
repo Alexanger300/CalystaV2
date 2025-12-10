@@ -74,8 +74,6 @@ body {
     justify-content: center;
     position:sticky;
     top:0;
-    border: #564DB0 solid 1px;
-    
 }
 
 .nav-menu {
@@ -84,7 +82,6 @@ body {
     gap: 60px;
     list-style: none;
     flex-wrap: wrap;
-    border:1px red solid;
     position:sticky;
 }
 
@@ -841,7 +838,7 @@ body {
         align-items: center;
         padding: 0 20px;
         justify-content: space-between;
-        background: var(--gradient-primary);
+        background: var(--color-primary);
         z-index: 102;
     }
 
@@ -854,13 +851,14 @@ body {
         top: 60px;
         left: 0;
         right: 0;
-        width: 100%;
-        background: var(--gradient-primary);
+        width: 50%;
+        background:var(--color-primary);
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        z-index: 101;
+        z-index: 100;
         padding: 0;
+        border-radius: 0 0 15px ;
     }
 
     .navbar.active {
@@ -877,7 +875,7 @@ body {
     }
 
     .nav-link {
-        padding: 15px 20px;
+        padding: 5px 5px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
