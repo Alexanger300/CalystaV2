@@ -124,27 +124,46 @@
             <h2 class="packs-title">Découvrez nos packs</h2>
             <p class="packs-subtitle">Le silence et le confort enfin à votre portée.</p>
 
-            <div class="packs-container">
-                <div class="pack-card">
-                    <h3 class="pack-title">Pack de Base</h3>
-                    <p class="pack-description">Une salle pour se ressourcer, de manière individuelle.</p>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn carousel-btn-prev" id="packPrevBtn">
+                    <span>‹</span>
+                </button>
+                
+                <div class="carousel-track">
+                    <div class="packs-container" id="packCarousel">
+                        <div class="pack-card pack-item">
+                            <h3 class="pack-title">Pack de Base</h3>
+                            <p class="pack-description">Une salle pour se ressourcer, de manière individuelle.</p>
+                        </div>
+                        <div class="pack-card pack-item">
+                            <h3 class="pack-title">Pack Audio</h3>
+                            <p class="pack-description">Une expérience auditive pour se détendre, accompagné de musique.</p>
+                        </div>
+                        <div class="pack-card pack-item">
+                            <h3 class="pack-title">Pack Immersion</h3>
+                            <p class="pack-description">Pour s'évader dans un autre monde relaxant, loin du quotidien.</p>
+                        </div>
+                        <div class="pack-card pack-item">
+                            <h3 class="pack-title">Pack Zen</h3>
+                            <p class="pack-description">Détendez-vous avec une approche hollistique du bien-être, centrée sur la méditation.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="pack-card">
-                    <h3 class="pack-title">Pack Audio</h3>
-                    <p class="pack-description">Une expérience auditive pour se détendre, accompagné de musique.</p>
-                </div>
-
-                <div class="pack-card">
-                    <h3 class="pack-title">Pack Immersion</h3>
-                    <p class="pack-description">Pour s'évader dans un autre monde relaxant, loin du quotidien.</p>
-                </div>
-
-                <div class="pack-card">
-                    <h3 class="pack-title">Pack Zen</h3>
-                    <p class="pack-description">Détendez-vous avec une approche hollistique du bien-être, centrée sur la méditation.</p>
-                </div>
-
+                
+                <button class="carousel-btn carousel-btn-next" id="packNextBtn">
+                    <span>›</span>
+                </button>
+            </div>
+            
+            <div class="carousel-dots" id="packDots">
+                <button class="dot active"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
             </div>
         </section>
     </div>
-
+    
+    <script src="script.js"></script>
+</body>
+</html>
