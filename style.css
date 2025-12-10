@@ -72,6 +72,10 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    position:sticky;
+    top:0;
+    border: #564DB0 solid 1px;
+    
 }
 
 .nav-menu {
@@ -80,6 +84,8 @@ body {
     gap: 60px;
     list-style: none;
     flex-wrap: wrap;
+    border:1px red solid;
+    position:sticky;
 }
 
 .nav-link {
@@ -557,13 +563,15 @@ body {
 
 .pack-card {
     background: rgba(86, 77, 176, 0.5);
-    border-radius: 50px;
+    border-radius: 8px;
     padding: 64px 40px;
     text-align: center;
-    min-height: 363px;
+    height: 100%;
+    aspect-ratio: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
     min-width: 100%;
     flex-shrink: 0;
@@ -927,9 +935,9 @@ body {
     }
     
     .pack-card {
-        min-height: 250px;
         padding: 40px 20px;
-        border-radius: 30px;
+        border-radius: 6px;
+        aspect-ratio: 1;
     }
     
     .pack-title {
@@ -1047,6 +1055,85 @@ body {
     
     .footer-link {
         font-size: 14px;
+    }
+    
+    /* Améliorations visibilité mobile */
+    .packs {
+        padding: 60px 20px 80px;
+    }
+    
+    .packs-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    .packs-subtitle {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    .carousel-wrapper {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .carousel-track {
+        width: 100%;
+        min-height: 300px;
+    }
+    
+    .carousel-btn {
+        align-self: center;
+    }
+    
+    .features {
+        padding: 60px 20px 80px;
+    }
+    
+    .features-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    
+    .features-subtitle {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .feature-card {
+        padding: 30px 20px;
+    }
+    
+    .about {
+        padding: 60px 20px 80px;
+    }
+    
+    .about-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
+    .team-member {
+        padding: 15px;
+    }
+    
+    .team-name {
+        font-size: 14px;
+    }
+    
+    .team-role {
+        font-size: 12px;
     }
 }
 .carousel-container {
