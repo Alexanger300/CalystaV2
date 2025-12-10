@@ -116,3 +116,45 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCarousel(0);
   }
 });
+
+// FAQ Accordion
+document.addEventListener('DOMContentLoaded', function() {
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const faqItem = question.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      const faqAnswer = faqItem.querySelector('.faq-answer');
+      
+      // Fermer tous les autres items avec animation
+      document.querySelectorAll('.faq-item').forEach(item => {
+        if (item !== faqItem && item.classList.contains('active')) {
+          item.classList.remove('active');
+        }
+      });
+      
+      // Toggle l'item actuel
+      if (!isActive) {
+        faqItem.classList.add('active');
+        // Calculer la hauteur réelle pour une animation fluide
+        if (faqAnswer) {
+          const contentHeight = faqAnswer.scrollHeight;
+          faqAnswer.style.maxHeight = contentHeight + 'px';
+        }
+      } else {
+        faqItem.classList.remove('active');
+        if (faqAnswer) {
+          faqAnswer.style.maxHeight = '0px';
+        }
+      }
+    });
+  });
+  
+  // Ajuster la hauteur lors du redimensionnement
+  window.addEventListener('resize', () => {
+    document.querySelectorAll('.faq-item.active .faq-answer').forEach(answer => {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    });
+  });
+});

@@ -589,6 +589,164 @@ body {
 }
 
 /* ============================================
+   FAQ SECTION
+   ============================================ */
+
+.faq-section {
+    padding: 80px 20px 120px;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    background: var(--color-primary);
+}
+
+.faq-container {
+    background: linear-gradient(180deg, #1B1464 0%, rgba(86, 77, 176, 0.5) 50.96%, #1B1464 100%);
+    border-radius: 0px 0px 100px 100px;
+    padding: 80px 60px;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    min-height: 606px;
+}
+
+.faq-left {
+    flex: 1;
+    max-width: 491px;
+}
+
+.faq-kicker {
+    font-family: 'NationalPark', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 64px;
+    color: #838BC5;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.faq-title {
+    font-family: 'NationalPark', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 64px;
+    margin: 0 0 20px;
+    background: linear-gradient(90deg, #E3CB93 0%, #C58BA6 79.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.faq-subtitle {
+    font-family: 'NationalPark', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #D9D9D9;
+    margin: 0;
+}
+
+.faq-right {
+    flex: 1;
+    max-width: 488px;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 16px 0;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.6);
+}
+
+.faq-item:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 8px 0;
+    cursor: pointer;
+    font-family: 'NationalPark', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #D9D9D9;
+    text-align: left;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.faq-question:hover {
+    color: #FFFFFF;
+    transform: translateX(5px);
+}
+
+.faq-question span:first-child {
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-question span:first-child {
+    background: linear-gradient(90deg, #E3CB93 0%, #C58BA6 79.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.faq-icon {
+    font-size: 28px;
+    color: #FFFFFF;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    flex-shrink: 0;
+    margin-left: 20px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(135deg);
+    color: #E3CB93;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, padding 0.4s ease;
+    font-family: 'NationalPark', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #D9D9D9;
+    opacity: 0;
+}
+
+.faq-answer p {
+    margin: 0;
+    transform: translateY(-10px);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 16px 0;
+    opacity: 1;
+}
+
+.faq-item.active .faq-answer p {
+    transform: translateY(0);
+}
+
+/* ============================================
    HAMBURGER MENU
    ============================================ */
 
@@ -796,6 +954,99 @@ body {
     
     .dot.active {
         width: 24px;
+    }
+    
+    /* FAQ responsive */
+    .faq-container {
+        flex-direction: column;
+        padding: 40px 20px;
+        border-radius: 0px 0px 50px 50px;
+        min-height: auto;
+    }
+    
+    .faq-left {
+        max-width: 100%;
+    }
+    
+    .faq-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    .faq-subtitle {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    .faq-right {
+        max-width: 100%;
+    }
+    
+    .faq-question {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    width: 100%;
+    background: #000000;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.footer-link:hover {
+    color: #E3CB93;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 20px;
+    }
+    
+    .footer-links {
+        gap: 20px;
+        flex-direction: column;
+    }
+    
+    .footer-link {
+        font-size: 14px;
     }
 }
 .carousel-container {
