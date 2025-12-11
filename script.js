@@ -144,6 +144,11 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.faq-item').forEach(item => {
         if (item !== faqItem && item.classList.contains('active')) {
           item.classList.remove('active');
+          const otherAnswer = item.querySelector('.faq-answer');
+          if (otherAnswer) {
+            otherAnswer.style.maxHeight = '0px';
+            otherAnswer.style.padding = '0';
+          }
         }
       });
       
@@ -154,11 +159,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (faqAnswer) {
           const contentHeight = faqAnswer.scrollHeight;
           faqAnswer.style.maxHeight = contentHeight + 'px';
+          faqAnswer.style.padding = '16px 0';
         }
       } else {
         faqItem.classList.remove('active');
         if (faqAnswer) {
           faqAnswer.style.maxHeight = '0px';
+          faqAnswer.style.padding = '0';
         }
       }
     });

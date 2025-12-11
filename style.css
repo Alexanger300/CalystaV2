@@ -7,6 +7,7 @@
     --gradient-secondary: linear-gradient(180deg , #838BC5 22%, #564DB0 40.38%, #1B1464 100%);
     --gradient-text: linear-gradient(90deg, #E3CB93 0%, #C58BA6 79.33%);
     --color-primary: #1B1464;
+    --color-primary-transparent: rgba(27, 20, 100, 0.60);
     --color-accent: #E3CB93;
     --color-light: #D9D9D9;
     --color-white: #FFFFFF;
@@ -731,44 +732,18 @@ body {
 
 .faq-answer {
     max-height: 0;  
-    overflow-y: auto;
+    overflow: visible;
     transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, padding 0.4s ease;
-    font-family: 'NationalPark', sans-serif;font-weight: 800;
+    font-family: 'NationalPark', sans-serif;font-weight: 700;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     color: #D9D9D9;
     opacity: 0;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(86, 77, 176, 0.7) rgba(86, 77, 176, 0.2);
-}
-
-.faq-answer::-webkit-scrollbar {
-    width: 8px;
-}
-
-.faq-answer::-webkit-scrollbar-track {
-    background: rgba(86, 77, 176, 0.2);
-    border-radius: 10px;
-}
-
-.faq-answer::-webkit-scrollbar-thumb {
-    background: rgba(86, 77, 176, 0.7);
-    border-radius: 10px;
-}
-
-.faq-answer::-webkit-scrollbar-thumb:hover {
-    background: rgba(86, 77, 176, 0.9);
-}
-
-.faq-answer p {
-    margin: 0;
-    transform: translateY(-10px);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 500px;
+    max-height: none;
     padding: 16px 0;
     opacity: 1;
 }
@@ -787,15 +762,19 @@ body {
     cursor: pointer;
     border: none;
     background: transparent;
-    padding: 10px;
-    z-index: 101;
+    padding: 15px 8px;
+    z-index: 103;
+    min-height: 44px;
+    min-width: 44px;
+    justify-content: center;
+    align-items: center;
 }
 
 .hamburger span {
-    width: 25px;
-    height: 3px;
+    width: 28px;
+    height: 4px;
     background-color: var(--color-light);
-    margin: 5px 0;
+    margin: 4px 0;
     transition: all 0.3s ease;
     border-radius: 2px;
 }
@@ -880,33 +859,39 @@ body {
         position: fixed;
         top: 60px;
         left: 0;
-        right: 0;
         width: 50%;
-        background:var(--color-primary);
+        background: var(--color-primary-transparent);
         max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
+        overflow-y: hidden;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
         z-index: 100;
         padding: 0;
-        border-radius: 0 0 15px ;
+        border-radius: 0 0 20px 0;
+        opacity: 0;
+        visibility: hidden;
     }
-
     .navbar.active {
         max-height: 100vh;
         overflow-y: auto;
+        opacity: 1;
+        visibility: visible;
     }
 
     .nav-menu {
         flex-direction: column;
         gap: 0;
-        padding: 20px 0;
-        align-items: stretch;
+        padding: 10px 150px 10px 0px;
         justify-content: flex-start;
+        overflow: hidden;
+        height: calc(100vh - 60px);
     }
 
     .nav-link {
-        padding: 5px 5px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 12px 0px 12px 20px;
+        
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .hero {
