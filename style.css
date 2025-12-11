@@ -43,10 +43,11 @@ body {
    ============================================ */
 
 .container {
-    width: 100%;
+    width: 100%;    
     max-width: 1180px;
     margin: 0 auto;
-    padding: 0;
+    margin-top: -80px;
+    padding: 80px 0 0 0;
     position: relative;
     background: var(--gradient-primary);
     border-radius: 0 0 100px 100px;
@@ -57,14 +58,17 @@ body {
    ============================================ */
 
 .header {
-    position: relative;
+    position: sticky;
+    top: 0;
     width: 100%;
     height: auto;
-    z-index: 100;
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    background: transparent;
+    transition: background 0.7s ease, box-shadow 0.7s ease, backdrop-filter 0.7s ease;
 }
 
 .navbar {
@@ -72,8 +76,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    position:sticky;
-    top:0;
+    position: static;
 }
 
 .nav-menu {
@@ -82,7 +85,13 @@ body {
     gap: 60px;
     list-style: none;
     flex-wrap: wrap;
-    position:sticky;
+    position: static;
+}
+
+.header.scrolled {
+    background: rgba(27, 20, 100, 0.9);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
 }
 
 .nav-link {
@@ -108,7 +117,6 @@ body {
     position: relative;
     width: 100%;
     height: auto;
-    border-radius: 0 0 100px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -722,10 +730,10 @@ body {
 }
 
 .faq-answer {
-    max-height: 0;
+    max-height: 0;  
     overflow-y: auto;
     transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, padding 0.4s ease;
-    font-family: 'NationalPark', sans-serif;
+    font-family: 'NationalPark', sans-serif;font-weight: 800;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
@@ -842,6 +850,8 @@ body {
     }
 
     .container {
+        margin-top: 0;
+        padding-top: 0;
         padding: 0;
         width: 100%;
         max-width: 100%;
@@ -904,7 +914,7 @@ body {
         width: 100%;
         height: auto;
         margin-top: 60px;
-        padding: 60px 20px 40px;
+        padding: 40px 20px 40px;
     }
 
     .hero-content {

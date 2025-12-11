@@ -1,6 +1,8 @@
 // Menu hamburger
 const hamburger = document.getElementById('hamburger');
 const navbar = document.getElementById('navbar');
+const header = document.querySelector('.header');
+const hero = document.querySelector('.hero');
 
 hamburger.addEventListener('click', () => {
     navbar.classList.toggle('active');
@@ -13,6 +15,17 @@ document.querySelectorAll('.nav-link').forEach(link => {
         navbar.classList.remove('active');
         hamburger.classList.remove('active');
     });
+});
+
+// Header sticky : transparent sur le hero, violet après
+window.addEventListener('scroll', () => {
+    if (!header || !hero) return;
+    const threshold = Math.max(hero.offsetHeight - header.offsetHeight, 0);
+    if (window.scrollY > threshold) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
 });
 
 // Carrousel des packs
