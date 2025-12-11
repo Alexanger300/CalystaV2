@@ -723,7 +723,7 @@ body {
 
 .faq-answer {
     max-height: 0;
-    overflow: hidden;
+    overflow-y: auto;
     transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, padding 0.4s ease;
     font-family: 'NationalPark', sans-serif;
     font-size: 16px;
@@ -731,6 +731,26 @@ body {
     line-height: 22px;
     color: #D9D9D9;
     opacity: 0;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(86, 77, 176, 0.7) rgba(86, 77, 176, 0.2);
+}
+
+.faq-answer::-webkit-scrollbar {
+    width: 8px;
+}
+
+.faq-answer::-webkit-scrollbar-track {
+    background: rgba(86, 77, 176, 0.2);
+    border-radius: 10px;
+}
+
+.faq-answer::-webkit-scrollbar-thumb {
+    background: rgba(86, 77, 176, 0.7);
+    border-radius: 10px;
+}
+
+.faq-answer::-webkit-scrollbar-thumb:hover {
+    background: rgba(86, 77, 176, 0.9);
 }
 
 .faq-answer p {
