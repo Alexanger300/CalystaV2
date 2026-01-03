@@ -40,6 +40,114 @@ body {
 }
 
 /* ============================================
+   ANIMATIONS KEYFRAMES
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+/* ============================================
    CONTENEUR PRINCIPAL
    ============================================ */
 
@@ -150,6 +258,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    animation: fadeInUp 0.8s ease-out, glow 3s ease-in-out infinite;
 }
 
 /* Sous-titre */
@@ -163,6 +272,7 @@ body {
     margin-bottom: 100px;
     margin-top: 30px;
     width: 100%;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 /* ============================================
@@ -190,6 +300,7 @@ body {
     text-decoration: none;
     display: inline-block;
     min-width: 204px;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
 .btn-student {
@@ -199,7 +310,8 @@ body {
 
 .btn-student:hover {
     background-color: var(--color-purple);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(86, 77, 176, 0.4);
 }
 
 .btn-campus {
@@ -210,7 +322,8 @@ body {
 
 .btn-campus:hover {
     background-color: #d4b89f;
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(227, 203, 147, 0.3);
 }
 
 /* ============================================
@@ -247,6 +360,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    animation: fadeInDown 0.8s ease-out;
 }
 
 .features-subtitle {
@@ -278,6 +392,13 @@ body {
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+    animation: fadeInUp 0.8s ease-out;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 55px rgba(86, 77, 176, 0.25);
 }
 
 .feature-icon {
@@ -346,6 +467,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-align: center;
+    animation: fadeInDown 0.8s ease-out;
 }
 
 .about-subtitle {
@@ -369,6 +491,12 @@ body {
 
 .team-member {
     text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-8px);
 }
 
 .team-photo {
@@ -377,6 +505,13 @@ body {
     background-size: cover;
     background-position: center;
     margin-bottom: 10px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.team-member:hover .team-photo {
+    filter: brightness(1.1) contrast(1.05);
+    transform: scale(1.02);
 }
 
 .team-photo--alyssa {
@@ -462,6 +597,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-align: center;
+    animation: fadeInDown 0.8s ease-out;
 }
 
 .packs-subtitle {
@@ -518,7 +654,8 @@ body {
 
 .carousel-btn:hover {
     background: rgba(86, 77, 176, 0.8);
-    transform: scale(1.1);
+    transform: scale(1.15);
+    box-shadow: 0 8px 16px rgba(86, 77, 176, 0.4);
 }
 
 .carousel-btn:active {
@@ -558,7 +695,7 @@ body {
 
 .dot:hover {
     background: rgba(86, 77, 176, 0.6);
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 
 .dot.active {
@@ -580,6 +717,14 @@ body {
     min-width: 100%;
     flex-shrink: 0;
     box-sizing: border-box;
+    animation: scaleIn 0.6s ease-out;
+    transition: all 0.3s ease;
+}
+
+.pack-card:hover {
+    background: rgba(86, 77, 176, 0.7);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(86, 77, 176, 0.4);
 }
 
 .pack-title {
@@ -647,6 +792,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: fadeInDown 0.8s ease-out;
 }
 
 .faq-subtitle {
@@ -694,11 +840,12 @@ body {
     text-align: left;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    animation: slideInLeft 0.6s ease-out;
 }
 
 .faq-question:hover {
     color: #FFFFFF;
-    transform: translateX(5px);
+    transform: translateX(8px);
 }
 
 .faq-question span:first-child {
@@ -1137,7 +1284,7 @@ body {
 }
 
 .social-link:hover {
-    transform: translateY(-2px);
+    transform: translateY(-4px) scale(1.1);
     opacity: 0.8;
 }
 
@@ -1173,7 +1320,7 @@ body {
 
 .footer-link:hover {
     color: #E3CB93;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 .footer-image img {
     width: 24px;
