@@ -3,7 +3,7 @@
     { "handle": "filesystem" },
     {
       "src": "/.*",
-      "dest": "/404.html",
+      "dest": "/404Error.html",
       "status": 404
     }
   ]
