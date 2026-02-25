@@ -344,6 +344,86 @@ body {
 }
 
 /* ============================================
+   SECTION PRESSION (ENTRE HERO ET FEATURES)
+   ============================================ */
+
+.pressure-section {
+    width: 100%;
+    max-width: 1180px;
+    margin: 30px auto 40px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.pressure-kicker {
+    font-family: 'NationalPark', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #bfc3e6;
+    margin-bottom: 8px;
+}
+
+.pressure-title {
+    font-family: 'NationalPark', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 60px;
+    margin: 0 auto 16px;
+    max-width: 900px;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.pressure-subtitle {
+    font-family: 'NationalPark', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #d9d9d9;
+    margin: 0 auto 42px;
+    max-width: 760px;
+}
+
+.pressure-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.pressure-stat-card {
+    padding: 8px 12px;
+}
+
+.pressure-stat-value {
+    font-family: 'NationalPark', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 12px;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.pressure-stat-text {
+    font-family: 'NationalPark', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #d9d9d9;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+/* ============================================
    SECTION FEATURES
    ============================================ */
 
@@ -576,6 +656,87 @@ body {
 .btn-about_more:hover {
     background-color: #d4b89f;
     transform: translateY(-2px);
+}
+
+/* ============================================
+   SECTION PREUVE SOCIALE
+   ============================================ */
+
+.social-proof-section {
+    padding: 80px 20px 120px;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--color-primary);
+}
+
+.social-proof-kicker {
+    font-family: 'NationalPark', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 64px;
+    color: #838BC5;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.social-proof-title {
+    font-family: 'NationalPark', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 64px;
+    margin: 0 auto 34px;
+    max-width: 905px;
+    background: linear-gradient(90deg, #E3CB93 0%, #C58BA6 79.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.social-proof-content {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1124px;
+    margin: 0 auto;
+}
+
+.social-proof-text-block {
+    text-align: left;
+}
+
+.social-proof-text {
+    font-family: 'Helvetica LT Pro', 'Helvetica', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #D9D9D9;
+    margin: 0 0 18px;
+    max-width: 430px;
+}
+
+.social-proof-btn {
+    background: #E3CB93;
+    color: #1B1464;
+    min-width: 220px;
+    animation: none;
+    margin-top: 12px;
+}
+
+.social-proof-image-wrap {
+    width: 100%;
+}
+
+.social-proof-image {
+    width: 100%;
+    max-width: 604px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 75px;
+    object-fit: cover;
 }
 
 /* ============================================
@@ -980,6 +1141,15 @@ body {
     .nav-menu {
         gap: 30px;
     }
+
+    .pressure-title {
+        font-size: 42px;
+        line-height: 48px;
+    }
+
+    .pressure-stat-value {
+        font-size: 52px;
+    }
 }
 
 /* ============================================
@@ -1092,6 +1262,44 @@ body {
         align-items: center;
     }
 
+    .pressure-section {
+        margin: 12px auto 26px;
+        padding: 0 15px;
+    }
+
+    .pressure-kicker {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .pressure-title {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 10px;
+    }
+
+    .pressure-subtitle {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+
+    .pressure-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .pressure-stat-value {
+        font-size: 42px;
+        margin-bottom: 8px;
+    }
+
+    .pressure-stat-text {
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 100%;
+    }
+
     .btn {
         width: 100%;
         max-width: 250px;
@@ -1190,6 +1398,40 @@ body {
         font-size: 16px;
         margin-top: 40px;
         min-width: 150px;
+    }
+
+    .social-proof-section {
+        padding: 60px 15px 80px;
+    }
+
+    .social-proof-title {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 24px;
+    }
+
+    .social-proof-content {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .social-proof-text-block {
+        text-align: center;
+    }
+
+    .social-proof-text {
+        font-size: 16px;
+        line-height: 22px;
+        max-width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .social-proof-btn {
+        min-width: 190px;
+    }
+
+    .social-proof-image {
+        border-radius: 24px;
     }
     
     /* Carrousel responsive */
@@ -1374,6 +1616,190 @@ body {
   margin: 2rem auto;
   padding: 0 1rem;
   overflow: hidden; /* masquer la zone hors-écran et laisser la track se déplacer */
+}
+
+/* ============================================
+   FOOTER V2 (INDEX2)
+   ============================================ */
+
+.footer-v2-wrap {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: var(--color-primary);
+}
+
+.footer-v2 {
+    background: linear-gradient(180deg, #564DB0 0%, #3E379B 100%);
+    border-radius: 20px 20px 0 0;
+    padding: 28px 34px 26px;
+    text-align: center;
+    border-top: none;
+}
+
+.footer-v2-star {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: -200px auto 10px;  
+    object-fit: contain;
+}
+
+.footer-v2-title {
+    font-family: 'NationalPark', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0;
+    display: inline-block;
+    padding-bottom: 4px;
+    background: linear-gradient(90deg, #E3CB93 0%, #C58BA6 79.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-v2-subtitle {
+    font-family: 'NationalPark', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #838BC5;
+    margin: 6px 0 18px;
+}
+
+.footer-v2-btn {
+    background: #E3CB93;
+    color: #1B1464;
+    min-width: 220px;
+    animation: none;
+}
+
+.footer-v2-social {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-v2-social-link img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.footer-v2-columns {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr 1fr;
+    align-items: start;
+    text-align: left;
+    gap: 20px;
+}
+
+.footer-v2-col h3 {
+    font-family: 'NationalPark', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #E3CB93;
+    margin: 0 0 10px;
+}
+
+.footer-v2-col p,
+.footer-v2-col a {
+    font-family: 'NationalPark', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #D9D9D9;
+    text-decoration: none;
+    display: block;
+}
+
+.footer-v2-col a:hover {
+    color: #E3CB93;
+}
+
+.footer-v2-col-right {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .footer-v2-wrap {
+        padding: 0;
+    }
+
+    .footer-v2 {
+        padding: 20px 16px 18px;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .footer-v2-star {
+        width: 112px;
+        height: 112px;
+        margin: -80px auto 8px;
+    }
+
+    .footer-v2-title {
+        font-size: 38px;
+        line-height: 1.15;
+        padding-bottom: 3px;
+    }
+
+    .footer-v2-subtitle {
+        font-size: 22px;
+        margin: 4px 0 10px;
+    }
+
+    .footer-v2-btn {
+        min-width: 170px;
+        padding: 9px 22px;
+        font-size: 14px;
+    }
+
+    .footer-v2-social-link img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .footer-v2-columns {
+        margin-top: 14px;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .footer-v2-col-center {
+        display: none;
+    }
+
+    .footer-v2-col h3 {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .footer-v2-col p,
+    .footer-v2-col a {
+        font-size: 10px;
+        line-height: 1.35;
+    }
+
+    .footer-v2-col-right {
+        text-align: left;
+    }
+}
+
+/* ============================================
+   RÉSERVATION - ESPACEMENT WIDGET / FOOTER
+   ============================================ */
+
+.reservation-page .footer-v2-wrap {
+    margin-top: 110px;
+}
+
+@media (max-width: 768px) {
+    .reservation-page .footer-v2-wrap {
+        margin-top: 80px;
+    }
 }
 
 

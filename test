@@ -1,0 +1,206 @@
+/* Rectangle 288 */
+
+position: absolute;
+width: 1440px;
+height: 587px;
+left: 0px;
+top: 5501px;
+
+background: linear-gradient(180deg, rgba(86, 77, 176, 0.5) 0%, rgba(36, 33, 74, 0.5) 100%);
+border-radius: 50px 50px 0px 0px;
+
+
+/* Group 1000006083 */
+
+position: absolute;
+width: 282px;
+height: 46px;
+left: 579px;
+top: 5824px;
+
+
+
+/* Rectangle 5 */
+
+position: absolute;
+width: 282px;
+height: 46px;
+left: 579px;
+top: 5824px;
+
+background: #E3CB93;
+border-radius: 30px;
+
+
+/* Je teste Calysta */
+
+position: absolute;
+width: 220px;
+height: 24px;
+left: calc(50% - 220px/2);
+top: 5836px;
+
+font-family: 'Helvetica LT Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+text-align: center;
+
+color: #1B1464;
+
+
+
+/* Calysta */
+
+position: absolute;
+width: 248px;
+height: 52px;
+left: calc(50% - 248px/2);
+top: 5633px;
+
+font-family: 'Baloo';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 64px;
+/* or 100% */
+text-align: center;
+
+/* Calysta 2 */
+background: linear-gradient(90deg, #E3CB93 0%, #C58BA6 79.33%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+
+
+/* Contact */
+
+position: absolute;
+width: 92px;
+height: 56px;
+left: calc(50% - 92px/2 - 544px);
+top: 5814px;
+
+font-family: 'National Park';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 64px;
+/* or 267% */
+
+/* Calysta 2 */
+background: linear-gradient(90deg, #E3CB93 0%, #C58BA6 79.33%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+
+
+/* Navigation */
+
+position: absolute;
+width: 151px;
+height: 56px;
+left: calc(50% - 151px/2 + 393.5px);
+top: 5814px;
+
+font-family: 'National Park';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 64px;
+/* or 267% */
+
+/* Calysta 2 */
+background: linear-gradient(90deg, #E3CB93 0%, #C58BA6 79.33%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+
+
+/* Rectangle 289 */
+
+position: absolute;
+width: 203px;
+height: 203px;
+left: calc(50% - 203px/2 + 0.5px);
+top: 5399px;
+
+background: url(Design sans titre (1));
+
+
+/* Siester pour mieux étudier. */
+
+position: absolute;
+width: 423px;
+height: 51px;
+left: calc(50% - 423px/2 + 0.5px);
+top: 5699px;
+
+font-family: 'Helvetica LT Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 64px;
+/* or 229% */
+text-align: center;
+
+/* Lilas */
+color: #838BC5;
+
+
+
+/* Ynov Campus Val d’Europe 19 Rue Haddock, 77700 Chessy calysta.ynov@gmail.com */
+
+position: absolute;
+width: 385px;
+height: 80px;
+left: calc(50% - 385px/2 - 397.5px);
+top: 5886px;
+
+font-family: 'National Park';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+/* or 120% */
+
+color: #D9D9D9;
+
+
+
+/* Présentation Qui sommes-nous Ydays Event FAQ */
+
+position: absolute;
+width: 385px;
+height: 98px;
+left: calc(50% - 385px/2 + 511.5px);
+top: 5886px;
+
+font-family: 'National Park';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+/* or 120% */
+
+color: #D9D9D9;
+
+
+
+/* Vector */
+
+position: absolute;
+width: 84px;
+height: 32px;
+left: calc(50% - 84px/2);
+top: 5914px;
+
+background: #838BC5;
