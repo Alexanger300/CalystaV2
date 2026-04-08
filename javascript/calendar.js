@@ -197,8 +197,25 @@ document.addEventListener('DOMContentLoaded', function() {
 		window.ReservationDB.sendReservationData(reservationData)
 		.then(data => {
 			if (data.success) {
-				summary.textContent = `✓ Merci ${nameValue} ! Votre reservation pour le ${formatDisplayDate(selectedDate)} a ${selectedSlot} a ete confirmee. Un email de confirmation a ete envoye a ${emailValue}.`;
+				const confirmationMessage = `✓ Merci ${nameValue} ! Votre reservation pour le ${formatDisplayDate(selectedDate)} a ${selectedSlot} a ete confirmee.`;
+				summary.textContent = confirmationMessage;
 				summary.style.color = '#E3CB93';
+
+				if (window.MailService && window.MailService.sendConfirmationEmail) {
+					window.MailService.sendConfirmationEmail(reservationData)
+						.then(() => {
+							if (summary) {
+								summary.textContent = `${confirmationMessage} Un email de confirmation a ete envoye a ${emailValue}.`;
+							}
+						})
+						.catch(mailError => {
+							console.error('Erreur envoi email:', mailError);
+							if (summary) {
+								summary.textContent = `${confirmationMessage} La reservation est enregistree, mais l\'email de confirmation n\'a pas pu etre envoye.`;
+								summary.style.color = '#ffb86b';
+							}
+						});
+				}
 
 				// Réinitialiser le formulaire
 				form.reset();
