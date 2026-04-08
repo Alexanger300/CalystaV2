@@ -1,1 +1,25 @@
 /test
+
+# Environnement - NE PAS COMMITER (contient les credentials Neon)
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+*.cache
+
+# Système
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node modules (si utilisation de npm/webpack)
+node_modules/
+package-lock.json
+yarn.lock

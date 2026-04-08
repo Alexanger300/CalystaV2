@@ -4,16 +4,18 @@ const navbar = document.getElementById('navbar');
 const header = document.querySelector('.header');
 const hero = document.querySelector('.hero');
 
-hamburger.addEventListener('click', () => {
+if (hamburger && navbar) {
+  hamburger.addEventListener('click', () => {
     navbar.classList.toggle('active');
     hamburger.classList.toggle('active');
-});
+  });
+}
 
 // Fermer le menu quand on clique sur un lien
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
-        navbar.classList.remove('active');
-        hamburger.classList.remove('active');
+    if (navbar) navbar.classList.remove('active');
+    if (hamburger) hamburger.classList.remove('active');
     });
 });
 
@@ -178,3 +180,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+

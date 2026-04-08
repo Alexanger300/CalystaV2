@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ydays - L'espace de sieste immersive</title>
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head> 
+<body class="reservation-page">
+<header class="header">
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>   
+        </button>
+        <nav class="navbar" id="navbar">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+
+            </ul>
+        </nav>
+    </header>
+<main class="reservation-main">
+    <section class="reservation-widget" aria-labelledby="reservation-title">
+        <div class="reservation-head">
+            <h1 id="reservation-title">Réserver votre séance</h1>
+            <p>Choisissez une date, un créneau, puis validez votre demande.</p>
+        </div>
+
+        <div class="reservation-grid">
+            <div class="calendar-card">
+                <div class="calendar-toolbar">
+                    <button type="button" class="calendar-nav" id="calendarPrev" aria-label="Mois precedent">&#10094;</button>
+                    <h2 id="calendarMonthLabel" class="calendar-month-label">Mois</h2>
+                    <button type="button" class="calendar-nav" id="calendarNext" aria-label="Mois suivant">&#10095;</button>
+                </div>
+
+                <div class="calendar-weekdays" aria-hidden="true">
+                    <span>Lun</span>
+                    <span>Mar</span>
+                    <span>Mer</span>
+                    <span>Jeu</span>
+                    <span>Ven</span>
+                    <span>Sam</span>
+                    <span>Dim</span>
+                </div>
+
+                <div id="calendarDays" class="calendar-days" role="grid" aria-label="Selection de date"></div>
+            </div>
+
+            <div class="booking-card">
+                <div class="slot-block">
+                    <h3>Créneaux disponibles</h3>
+                    <div id="timeSlots" class="time-slots" role="listbox" aria-label="Selection de creneau"></div>
+                </div>
+
+                <form id="reservationForm" class="reservation-form">
+                    <input type="hidden" id="selectedDate" name="selectedDate">
+                    <input type="hidden" id="selectedSlot" name="selectedSlot">
+
+                    <label for="fullname">Nom complet</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Votre nom" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="vous@email.com" required>
+
+                    <button type="submit" class="btn booking-submit">Confirmer ma reservation</button>
+                </form>
+
+                <p id="bookingSummary" class="booking-summary" aria-live="polite">Aucune date selectionnée.</p>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Footer -->
+    <section id="contact" class="footer-v2-wrap">
+        <footer class="footer footer-v2">
+            <img src="/images/etoile.gif" alt="Logo étoile Calysta" class="footer-v2-star">
+
+            <h2 class="footer-v2-title">Calysta</h2>
+            <p class="footer-v2-subtitle">Siester pour mieux étudier.</p>
+
+            <a href="form.html" class="btn footer-v2-btn">Je teste Calysta</a>
+
+            <div class="footer-v2-social" aria-label="Réseaux sociaux">
+                <a href="https://www.instagram.com/calysta.ynov" class="footer-v2-social-link" aria-label="Instagram">
+                    <img src="/images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/company/calystasiestesimmersives/" class="footer-v2-social-link" aria-label="LinkedIn">
+                    <img src="/images/linkedin.png" alt="LinkedIn">
+                </a>
+            </div>
+
+            <div class="footer-v2-columns">
+                <div class="footer-v2-col">
+                    <h3>Contact</h3>
+                    <p>Ynov Campus Val d’Europe<br>19 Rue Haddock, 77700 Chessy</p>
+                    <a href="mailto:calysta.ynov@gmail.com">calysta.ynov@gmail.com</a>
+                </div>
+
+                <div class="footer-v2-col footer-v2-col-center"></div>
+
+                <div class="footer-v2-col footer-v2-col-right">
+                    <h3>Navigation</h3>
+                    <a href="index.html#about">Présentation</a>
+                    <a href="index.html#team">Qui sommes-nous</a>
+                    <a href="index.html#ydaysevent">Ydays Event</a>
+                    <a href="index.html#faq">FAQ</a>
+                </div>
+            </div>
+        </footer>
+    </section>
+    
+    <script src="/javascript/script.js"></script>
+    <script type="module" src="/db.js"></script>
+    <script src="/javascript/calendar.js"></script>
+</body>
+</html>
