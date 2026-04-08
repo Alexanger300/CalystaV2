@@ -2,8 +2,8 @@ import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/+esm';
 
 ;(function () {
 	const emailConfig = window.EMAILJS_CONFIG || {
-		serviceId: 'service_bdelha1',
-		templateId: 'template_855zprc',
+		serviceId: 'service_9qwbdgl',
+		templateId: 'template_59k5ijj',
 		publicKey: '-YPI2UCZPFRdptYsU'
 	};
 
