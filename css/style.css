@@ -502,7 +502,7 @@ body {
     width: 46px;
     height: 46px;
     border-radius: 8px;
-    background-image: url('./images/icone1.png');
+    background-image: url('../images/icone1.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -510,16 +510,14 @@ body {
     flex-shrink: 0;
 }
 .feature-icon[id="2"] {
-    background-image: url('./images/icone2.png');
+    background-image: url('../images/icone2.png');
 }
 .feature-icon[id="3"] {
-    background-image: url('./images/icone3.png');
+    background-image: url('../images/icone3.png');
 }
 .feature-icon[id="4"] {
-    background-image: url('./images/icone4.png');
+    background-image: url('../images/icone4.png');
 }
-
-
 .feature-title {
     font-family: 'NationalPark', sans-serif;
     font-size: 22px;
